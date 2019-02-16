@@ -12,6 +12,18 @@
 
 <img src="sabrina2.jpg" alt="" align="right">
 
+<button onclick="myFunction()">Click Me - Generate Random Number!</button>
+<p id="random"></p>
+
+<button onclick="myFunction2()">Click Me - Generate Random Number Rounded!</button>
+<p id="rounded"></p>
+
+<button onclick="myFunction3()">Click Me - Generate Random Number Rounded!</button>
+<p id="hour"></p>
+
+<button onclick="myFunction4()">Click Me - Generate Random Number Rounded!</button>
+<p id="month"></p>
+
 <script>
 
 var currentDate = new Date();
@@ -19,21 +31,29 @@ document.write("The current date is: " + currentDate);
 
 alert("Hello User!");
 
-var RandomNumber = Math.random();
-document.write("<br>");
-document.write("Your generated number is: " + RandomNumber);
+function myFunction() {
+  var RandomNumber = Math.random();
+  document.getElementById("random").innerHTML= ("Your generated number is: " + RandomNumber);
+}
 
-var RoundedNumber = Math.round(RandomNumber);
-document.write("<br>");
-document.write("I have successfully rounded the value " + RandomNumber + " to this value " + RoundedNumber);
+function myFunction2() {
+  var RandomNumber = Math.random();
+  var RoundedNumber = Math.round(RandomNumber);
+  document.getElementById("rounded").innerHTML= ("I have successfully rounded the value " + RandomNumber + " to this value " + RoundedNumber);
+}
 
-var currentHours = currentDate.getHours();
-document.write("<br>");
-document.write("The current hour is the following: " + currentHours);
+function myFunction3() {
+  var currentHours = currentDate.getHours();
+  document.getElementById("hour").innerHTML= ("The current hour is the following: " + currentHours);
+}
 
-var month = currentDate.getMonth();
-document.write("<br>");
-document.write("The current month is: " + month)
+
+function myFunction4() {
+  var month = currentDate.getMonth();
+  document.getElementById("month").innerHTML= ("The current month is: " + month)
+}
+
+
 
 </script>
 
